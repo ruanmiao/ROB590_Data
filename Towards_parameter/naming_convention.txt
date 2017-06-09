@@ -1,0 +1,11 @@
+translational_dir_deformability
+translational_dis_deformability
+rotational_deformability
+O + obstacle_threshold
+r + grid resolution
+s + simulation per step
+L + 
+R +
+
+grid resolution default value is 0.025
+

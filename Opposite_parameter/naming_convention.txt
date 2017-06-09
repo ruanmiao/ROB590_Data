@@ -1,0 +1,7 @@
+translational_dir_deformability
+translational_dis_deformability
+rotational_deformability
+L + link length
+R + radius
+
+no L and R means L = 0.025, R = 0.01

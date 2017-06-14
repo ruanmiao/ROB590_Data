@@ -8,18 +8,18 @@ space_hold_1 = '%n';
 %%%%%%%%%%% Error Analysis %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 file_error_D = 'Opposite_D/error_realtime.txt';
 file_error_1 = 'Opposite_parameter/opposite_20000_4_7/error_realtime.txt';
-file_error_2 = 'Opposite_parameter/opposite_20000_4_6-5/error_realtime.txt';
-file_error_3 = 'Opposite_parameter/opposite_20000_4_6/error_realtime.txt';
+file_error_2 = 'Opposite_parameter/opposite_5000_4_7/error_realtime.txt';
+file_error_3 = 'Opposite_parameter/opposite_20_3_20/error_realtime.txt';
 
 file_t_D = 'Opposite_D/time_test.txt';
 file_t_1 = 'Opposite_parameter/opposite_20000_4_7/time_test.txt';
-file_t_2 = 'Opposite_parameter/opposite_20000_4_6-5/time_test.txt';
-file_t_3 = 'Opposite_parameter/opposite_20000_4_6/time_test.txt';
+file_t_2 = 'Opposite_parameter/opposite_5000_4_7/time_test.txt';
+file_t_3 = 'Opposite_parameter/opposite_20_3_20/time_test.txt';
 
 parameter_set_D = 'D';
 parameter_set_1 = '20000,4,7';
-parameter_set_2 = '20000,4,7,L0.025,R0.005';
-parameter_set_3 = '20000,4,7,L0.015,R0.01';
+parameter_set_2 = '5000,4,7';
+parameter_set_3 = '20,3,20';
 
 error_D = readData_fn(file_error_D, space_hold_28);
 error_1 = readData_fn(file_error_1, space_hold_28);

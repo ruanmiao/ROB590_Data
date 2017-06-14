@@ -7,15 +7,21 @@ space_hold_1 = '%n';
 
 %%%%%%%%%%% Error Analysis %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %file_constraint_D = 'Towards/constraint_violation.txt';
-file_constraint_D = 'Towards_parameter/towards_20000_4_7_O2-0_r005/constraint_violation.txt';
-file_constraint_1 = 'Towards_parameter/towards_20_4_7/constraint_violation.txt';
-file_constraint_2 = 'Towards_parameter/towards_20_3_20/constraint_violation.txt';
+file_constraint_D = 'Towards_parameter/towardsD_20_3_20_s100/constraint_violation.txt';
+file_constraint_1 = 'Towards_parameter/towards_20_3_20/constraint_violation.txt';
+file_constraint_2 = 'Towards_parameter/towards_20000_4_7_O2-0_r005/constraint_violation.txt';
 file_constraint_3 = 'Towards_parameter/towards_20000_4_7/constraint_violation.txt';
+
+file_t_D = 'Opposite_parameter/towardsD_20_3_20_s100/time_test.txt';
+file_t_1 = 'Opposite_parameter/towards_20_3_20/time_test.txt';
+file_t_2 = 'Opposite_parameter/opposite_20000_4_6-5/time_test.txt';
+file_t_3 = 'Opposite_parameter/opposite_20000_4_6/time_test.txt';
+
 %parameter_set_D = 'D';
-parameter_set_D = '20000,4,7,O1.0,r0.005';
+parameter_set_D = '20,4,20,O1.0';
 parameter_set_1 = '20,4,7';
 parameter_set_2 = '20,3,20';
-parameter_set_3 = '20000,4,7,O1.0,r0.01';
+parameter_set_3 = '20000,4,7,O2.0,r0.005,s200';
 
 constraint_D = readData_fn(file_constraint_D, space_hold_28);
 constraint_1 = readData_fn(file_constraint_1, space_hold_28);
@@ -27,10 +33,10 @@ mean_constraint_1 = mean(constraint_1,2);
 mean_constraint_2 = mean(constraint_2,2);
 mean_constraint_3 = mean(constraint_3,2);
 
-t_D = generateTime_fn(mean_constraint_D);
-t_1 = generateTime_fn(mean_constraint_1);
-t_2 = generateTime_fn(mean_constraint_2);
-t_3 = generateTime_fn(mean_constraint_3);
+t_D = readTime(file_t_D);
+t_1 = readTime(file_t_1);
+t_2 = readTime(file_t_2);
+t_3 = readTime(file_t_3);
 
 ind_D = 1:length(t_D);
 

@@ -7,21 +7,21 @@ space_hold_1 = '%n';
 
 %%%%%%%%%%% Error Analysis %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %file_constraint_D = 'Towards/constraint_violation.txt';
-file_constraint_D = 'Towards_parameter/towards_20_3_20_O1-0/constraint_violation.txt';
-file_constraint_1 = 'Towards_parameter/towards_20_4_7/constraint_violation.txt';
-file_constraint_2 = 'Towards_parameter/towards_20_3_20/constraint_violation.txt';
-file_constraint_3 = 'Towards_parameter/towards_20000_4_7_O2-0_r005_s200/constraint_violation.txt';
+file_constraint_D = 'Towards_parameter/towardsD_20_3_20/constraint_violation.txt';
+file_constraint_1 = 'Towards_parameter/towards_20_3_20/constraint_violation.txt';
+file_constraint_2 = 'Towards_parameter/towards_20000_4_7_O2-0_r005/constraint_violation.txt';
+file_constraint_3 = 'Towards_parameter/towards_20000_4_7/constraint_violation.txt';
 
-file_t_D = 'Opposite_D/time_test.txt';
-file_t_1 = 'Opposite_parameter/opposite_20000_4_7/time_test.txt';
-file_t_2 = 'Opposite_parameter/opposite_20000_4_6-5/time_test.txt';
-file_t_3 = 'Opposite_parameter/opposite_20000_4_6/time_test.txt';
+file_t_D = 'Towards_parameter/towardsD_20_3_20/time_test.txt';
+file_t_1 = 'Towards_parameter/towards_20_3_20/time_test.txt';
+file_t_2 = 'Towards_parameter/towards_20000_4_7_O2-0_r005/time_test.txt';
+file_t_3 = 'Towards_parameter/towards_20000_4_7/time_test.txt';
 
 %parameter_set_D = 'D';
-parameter_set_D = '20,4,20,O1.0';
-parameter_set_1 = '20,4,7';
-parameter_set_2 = '20,3,20';
-parameter_set_3 = '20000,4,7,O2.0,r0.005,s200';
+parameter_set_D = 'old model';
+parameter_set_1 = '20,3,20';
+parameter_set_2 = '20000,4,7, resolution: 0.005';
+parameter_set_3 = '20000,4,7, resolution: 0.025';
 
 constraint_D = readData_fn(file_constraint_D, space_hold_28);
 constraint_1 = readData_fn(file_constraint_1, space_hold_28);
@@ -57,10 +57,10 @@ t_2 = raw_t_2(ind_2);
 t_3 = raw_t_3(ind_3);
 %}
 %%%%%%%%%%%%%%%%%%%%%% select the parameter set showing whole data %%%%
-show_constraint = constraint_3;
-show_t = t_3;
-show_ind = 1:length(t_3);
-show_legend = parameter_set_3;
+show_constraint = constraint_1;
+show_t = t_1;
+show_ind = 1:length(t_1);
+show_legend = parameter_set_1;
 
 %%%%%%%%%%%%%%%%%%%%%% Show all in one plot
 

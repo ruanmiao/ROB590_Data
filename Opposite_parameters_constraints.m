@@ -75,9 +75,9 @@ plot(show_t,show_constraint(show_ind,3), show_t,show_constraint(show_ind,5),...
     show_t,show_constraint(show_ind,26), show_t,show_constraint(show_ind,28)) 
 legend('3', '5','7', '9', '11', '12' ,'13','14','16','18', '19', '20','22',...
     '24', '26', '28')
-title('Predicted p dot error for new model')
-xlabel(show_legend)
-ylabel('Meter')
+title('Predicted p dot constraint for new model.')
+xlabel('t')
+ylabel('abs-cosine between p dot and surface normal')
 
 
 %%%%%%%%%%%%%%%%%%%% show all in two plots: %%%%%%%%%%%%%%%%%%
@@ -131,6 +131,14 @@ legend(parameter_set_D, parameter_set_1, parameter_set_2, parameter_set_3)
 title('mean constraint with paramters pool')
 xlabel('t step')
 ylabel('Meter')
+
+figure
+plot(t_D, mean_constraint_D, t_1, mean_constraint_1)
+legend(parameter_set_D, parameter_set_1)
+title('mean constraint with paramters pool')
+xlabel('t step')
+ylabel('Mean constraint violation (in cosine)')
+
 
 
 %%%%%%%%%%%%%%%%%%%%%% Show all in one plot, for D
